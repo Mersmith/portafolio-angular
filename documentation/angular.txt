@@ -1,0 +1,15 @@
+npm install -g @angular/cli 
+
+ng new portafolio
+
+cd portafolio
+
+ng add @ionic/angular
+
+ng g c pages/home
+ng g c pages/contact  
+ng g c pages/service
+ng g c pages/portfolio
+ng g c componets/header
+ng g c componets/footer
+ng serve

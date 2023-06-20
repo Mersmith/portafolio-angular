@@ -1,0 +1,22 @@
+<nav class="navbar">
+    <div class="toggle" (click)="toggleMenu()">
+      <i class="fas fa-bars"></i>Toogle
+    </div>
+    <ul class="navbar-nav" [ngClass]="{ 'active': isMenuOpen }">
+      <li class="nav-item" (click)="toggleSubItems(1)">
+        <a href="#" class="nav-link">Nivel 1 - Item 1</a>
+        <ul class="sub-items" *ngIf="activeItem === 1">
+          <li class="sub-item"><a href="#">Nivel 2 - Item 1</a></li>
+          <li class="sub-item"><a href="#">Nivel 2 - Item 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item" (click)="toggleSubItems(2)">
+        <a href="#" class="nav-link">Nivel 1 - Item 2</a>
+        <ul class="sub-items" *ngIf="activeItem === 2">
+          <li class="sub-item"><a href="#">Nivel 2 - Item 3</a></li>
+          <li class="sub-item"><a href="#">Nivel 2 - Item 4</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  
